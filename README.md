@@ -1,16 +1,68 @@
-# React + Vite
+<div align="center">
+  <img src="./public/logo.png" alt="Snipify Logo" width="120" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  # Snipify
+  
+  **Code Organization at the Speed of Thought.**
+</div>
 
-Currently, two official plugins are available:
+<br />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ About The Project
 
-## React Compiler
+**Snipify** is a full-stack web application designed to help developers and students store, organize, and manage reusable code efficiently. It eliminates scattered logic across fragmented platforms by offering a centralized, searchable, and beautifully-designed codebase toolkit.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> **💡 Note:** This application was developed as a collaborative **minor project** by a dedicated student team!
 
-## Expanding the ESLint configuration
+## 🛠️ Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Code Organization:** Sort your snippets cleanly into fully manageable folders.
+- **Syntax Highlighting:** View code natively with customizable editor themes (VS Code Dark+, Dracula, Material Dark, etc.).
+- **User Authentication:** Secure sign-in, registration, and user profiles backed by Firebase Authentication.
+- **Search & Favorites:** Bookmark your most-used snippets and easily filter through your centralized knowledge base.
+
+## 🚀 Built With
+
+* **Frontend Framework:** React.js (Vite)
+* **Styling:** Tailwind CSS & Glassmorphism UI
+* **Routing:** React Router v6
+* **Backend Database & Auth:** Firebase (Firestore)
+
+## 👥 Meet The Team
+
+This minor project was proudly brought to life by:
+
+* **Rahul Kumar** – UI/UX Designer | Team Lead
+* **Raghuvansh Koushal** – Full Stack Engineer
+* **Rohit Singh Baghel** – Backend Architecture
+* **Sagar Kumar** – Frontend Engineer
+
+---
+
+## 💻 Getting Started
+
+To get a local development copy up and running, follow these simple steps:
+
+### Prerequisites
+Make sure you have `npm` and Node.js installed on your machine.
+```sh
+npm install npm@latest -g
+```
+
+### Installation
+
+1. Clone the repository
+   ```sh
+   git clone https://github.com/rahulkr-2004/Snipify.git
+   ```
+2. Install NPM dependencies
+   ```sh
+   npm install
+   ```
+3. Set up your Firebase environment variables (Create a `.env` file based on your config).
+4. Run the development server
+   ```sh
+   npm run dev
+   ```
+   
+> Snipify will now be running on `http://localhost:5173`
