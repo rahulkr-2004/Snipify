@@ -44,7 +44,7 @@ export default function Register() {
   return (
     <div className="flex items-center justify-center min-h-screen p-4 relative overflow-hidden">
 
-      <div className="w-full max-w-md p-10 glass-panel rounded-2xl relative">
+      <div className="w-full max-w-md p-6 sm:p-10 glass-panel rounded-2xl relative">
         <div className="text-center mb-10">
           <h1 className="text-4xl font-extrabold mb-2 tracking-tight">
             Join <span className="text-gradient" style={{ fontFamily: '"Nosifer", "Creepster", cursive', letterSpacing: '2px', textTransform: 'uppercase', textShadow: '0 0 20px rgba(168,85,247,0.4)' }}>SNIPIFY</span>

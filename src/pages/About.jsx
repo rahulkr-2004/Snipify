@@ -29,7 +29,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-[calc(100vh-80px)] relative overflow-hidden flex flex-col items-center pt-24 px-6 pb-24">
+    <div className="min-h-[calc(100vh-80px)] relative overflow-hidden flex flex-col items-center pt-16 md:pt-24 px-4 sm:px-6 pb-16 md:pb-24">
 
       <div
         className="absolute inset-0 pointer-events-none z-0 opacity-20 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:32px_32px]"
@@ -39,34 +39,34 @@ export default function About() {
         }}
       ></div>
 
-      <div className="z-10 w-full max-w-5xl flex flex-col items-center text-center mb-24">
-        <div className="absolute top-[20%] w-[400px] h-[100px] bg-gradient-to-r from-[#7c3aed] to-[#2563eb] blur-[100px] opacity-40 mix-blend-screen pointer-events-none"></div>
+      <div className="z-10 w-full max-w-5xl flex flex-col items-center text-center mb-16 md:mb-24 px-2">
+        <div className="absolute top-[20%] w-[250px] md:w-[400px] h-[100px] bg-gradient-to-r from-[#7c3aed] to-[#2563eb] blur-[100px] opacity-40 mix-blend-screen pointer-events-none"></div>
 
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-purple-500/30 mb-8 mt-10">
           <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
           <span className="text-sm font-medium text-purple-200">Snipify</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-8">
-          Code Organization <br />
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 md:mb-8 leading-tight">
+          Code Organization <br className="hidden sm:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
             at the speed of thought.
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl text-gray-400 max-w-3xl leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl leading-relaxed px-4">
           The Online Code Snippet Manager is a full-stack web application designed to help developers and students store, organize, and manage reusable code efficiently. It eliminates scattered logic across fragmented platforms by offering a centralized, searchable, beautifully-designed codebase toolkit.
         </p>
       </div>
 
       <div className="z-10 w-full max-w-6xl mt-auto">
-        <div className="flex items-center gap-4 mb-10 w-full">
+        <div className="flex items-center gap-2 sm:gap-4 mb-8 md:mb-10 w-full">
           <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent flex-1"></div>
-          <h3 className="text-sm font-bold tracking-widest text-gray-400 uppercase">Meet the Building Team</h3>
+          <h3 className="text-xs sm:text-sm font-bold tracking-widest text-gray-400 uppercase text-center px-2">Meet the Building Team</h3>
           <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent flex-1"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-2 sm:px-0">
           {developers.map((dev, index) => (
             <div
               key={index}

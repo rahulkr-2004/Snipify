@@ -1,4 +1,4 @@
-import { FiSearch, FiCommand, FiPlus, FiCode, FiClock, FiTrash2, FiDownload, FiCopy } from 'react-icons/fi';
+import { FiSearch, FiCommand, FiPlus, FiCode, FiClock, FiTrash2, FiDownload, FiCopy, FiMenu } from 'react-icons/fi';
 import Sidebar from '../components/Sidebar';
 import SnippetEditor from '../components/SnippetEditor';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -19,6 +19,7 @@ export default function Dashboard({ openProfile }) {
   const [isEditorOpen, setIsEditorOpen] = useState(false);
   const [editingSnippet, setEditingSnippet] = useState(null);
   const [filterMode, setFilterMode] = useState('all'); // 'all' or 'favorites'
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   
   const [syntaxThemeName, setSyntaxThemeName] = useState('vscDarkPlus');
 
@@ -176,20 +177,30 @@ export default function Dashboard({ openProfile }) {
         filterMode={filterMode}
         setFilterMode={setFilterMode}
         openProfile={openProfile}
+        isSidebarOpen={isSidebarOpen}
+        setIsSidebarOpen={setIsSidebarOpen}
       />
       
-      <div className="flex-1 flex flex-col h-full overflow-hidden relative z-10 px-8 pt-8">
+      <div className="flex-1 flex flex-col h-full overflow-hidden relative z-10 px-4 md:px-8 pt-4 md:pt-8">
         
         {/* Top Header Area */}
-        <header className="flex justify-between items-start md:items-center mb-8 flex-col md:flex-row gap-4">
-          <div>
-            <h2 className="text-3xl font-extrabold text-white tracking-tight">
-              {filterMode === 'favorites' ? 'Favorite Snippets' : 
-               selectedFolder ? folders.find(f => f.id === selectedFolder)?.name : 'All Snippets'}
-            </h2>
-            <p className="text-gray-400 mt-1">
-              {loading ? "Loading library..." : `Showing ${displayedSnippets.length} snippets.`}
-            </p>
+        <header className="flex justify-between items-start md:items-center mb-8 flex-col md:flex-row gap-4 w-full">
+          <div className="flex items-center gap-4">
+            <button 
+              onClick={() => setIsSidebarOpen(true)}
+              className="md:hidden p-2 text-gray-400 hover:text-white bg-white/5 rounded-xl border border-white/10"
+            >
+              <FiMenu size={24} />
+            </button>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+                {filterMode === 'favorites' ? 'Favorite Snippets' : 
+                 selectedFolder ? folders.find(f => f.id === selectedFolder)?.name : 'All Snippets'}
+              </h2>
+              <p className="text-gray-400 mt-1 text-sm md:text-base">
+                {loading ? "Loading library..." : `Showing ${displayedSnippets.length} snippets.`}
+              </p>
+            </div>
           </div>
 
           <div className="flex items-center gap-4">

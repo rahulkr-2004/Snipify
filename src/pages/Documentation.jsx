@@ -155,7 +155,7 @@ export default function Documentation() {
       <div className="absolute top-[10%] left-[20%] w-[500px] h-[200px] bg-gradient-to-r from-[#fb437c] to-[#6f55ff] blur-[150px] opacity-20 mix-blend-screen pointer-events-none"></div>
 
       <header className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4 flex items-center gap-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
           Documentation
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
@@ -196,7 +196,7 @@ export default function Documentation() {
 
         {/* Content Area */}
         <div className="flex-1 min-w-0">
-          <div className="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 bg-black/40 min-h-[600px] shadow-2xl relative overflow-hidden">
+          <div className="glass-panel p-5 md:p-12 rounded-3xl border border-white/10 bg-black/40 min-h-[600px] shadow-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-noise opacity-[0.02] mix-blend-overlay pointer-events-none"></div>
             
             {DOC_SECTIONS.find(s => s.id === activeSection)?.content}

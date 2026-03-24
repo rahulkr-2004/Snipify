@@ -68,7 +68,7 @@ export default function Explore() {
 
   return (
     <div className="flex-1 w-full min-h-[calc(100vh-80px)] overflow-hidden relative z-10 px-4 md:px-12 pt-8 flex flex-col">
-      <header className="flex justify-between items-end mb-10 border-b border-white/10 pb-6">
+      <header className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 border-b border-white/10 pb-6 gap-6">
         <div>
           <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 tracking-tight flex items-center gap-3">
             <FiGlobe className="text-blue-400" /> Explore
@@ -77,7 +77,7 @@ export default function Explore() {
             Discover and copy public snippets from the community.
           </p>
         </div>
-        <div className="relative w-80">
+        <div className="relative w-full md:w-80">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <FiSearch className="text-gray-500" />
           </div>

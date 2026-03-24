@@ -22,30 +22,30 @@ function App() {
   return (
     <div className="min-h-screen">
       <AnimatedBackground />
-      <header className="sticky top-0 z-50 glass-panel border-b border-white/10 px-6 py-4 flex justify-between items-center bg-black/40">
+      <header className="sticky top-0 z-50 glass-panel border-b border-white/10 px-4 md:px-6 py-4 flex flex-col md:flex-row justify-between items-center bg-black/40 gap-4 md:gap-0">
         <Link to="/" className="flex items-center gap-4">
           <div className="w-10 h-10 rounded-lg overflow-hidden bg-black flex items-center justify-center shadow-[0_0_15px_rgba(111,85,255,0.4)]">
             <img src="/logo.png" alt="Snipify Logo" className="w-full h-full object-cover" />
           </div>
-          <h1 className="text-3xl font-normal text-white mt-1" style={{ fontFamily: '"Nosifer", "Creepster", cursive', letterSpacing: '2px' }}>
+          <h1 className="text-2xl md:text-3xl font-normal text-white mt-1" style={{ fontFamily: '"Nosifer", "Creepster", cursive', letterSpacing: '2px' }}>
             SNIPIFY
           </h1>
         </Link>
         
-        <div className="flex items-center gap-6">
-          <Link to="/" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
+        <div className="flex items-center gap-4 md:gap-6 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 justify-start md:justify-end custom-scrollbar">
+          <Link to="/" className="text-sm font-medium text-gray-300 hover:text-white transition-colors whitespace-nowrap">
             Home
           </Link>
-          <Link to="/explore" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
+          <Link to="/explore" className="text-sm font-medium text-gray-300 hover:text-white transition-colors whitespace-nowrap">
             Explore
           </Link>
-          <Link to="/docs" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
+          <Link to="/docs" className="text-sm font-medium text-gray-300 hover:text-white transition-colors whitespace-nowrap">
             Documentation
           </Link>
-          <Link to="/about" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
+          <Link to="/about" className="text-sm font-medium text-gray-300 hover:text-white transition-colors whitespace-nowrap">
             About Us
           </Link>
-          <button onClick={() => setIsProfileOpen(true)} className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
+          <button onClick={() => setIsProfileOpen(true)} className="text-sm font-medium text-gray-300 hover:text-white transition-colors whitespace-nowrap shrink-0">
             Profile
           </button>
         </div>

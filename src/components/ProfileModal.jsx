@@ -127,7 +127,7 @@ export default function ProfileModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md" onClick={onClose}>
-      <div className="w-full max-w-lg glass-panel p-8 rounded-3xl shadow-2xl relative" onClick={e => e.stopPropagation()}>
+      <div className="w-full max-w-lg glass-panel p-6 sm:p-8 rounded-3xl shadow-2xl relative" onClick={e => e.stopPropagation()}>
         <button onClick={onClose} className="absolute top-6 right-6 text-gray-500 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-xl">
            <FiX size={20} />
         </button>

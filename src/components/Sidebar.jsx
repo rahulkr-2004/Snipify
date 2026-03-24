@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { createPortal } from 'react-dom';
-import { FiFolder, FiPlus, FiStar, FiSettings, FiLogOut, FiHash, FiTrash2 } from 'react-icons/fi';
+import { FiFolder, FiPlus, FiStar, FiSettings, FiLogOut, FiHash, FiTrash2, FiX } from 'react-icons/fi';
 import { useAuth } from '../context/AuthContext';
 import { useState, useEffect } from 'react';
 import { dbService } from '../services/db';
@@ -13,7 +13,9 @@ export default function Sidebar({
   onDeleteFolder,
   filterMode,
   setFilterMode,
-  openProfile
+  openProfile,
+  isSidebarOpen,
+  setIsSidebarOpen
 }) {
   const { logout, currentUser } = useAuth();
   const [isCreating, setIsCreating] = useState(false);
@@ -50,8 +52,27 @@ export default function Sidebar({
   };
 
   return (
-    <aside className="w-64 border-r border-white/10 bg-black/40 backdrop-blur-xl h-full flex flex-col pt-6 z-10 w-full md:w-64 shrink-0 transition-all absolute md:relative -translate-x-full md:translate-x-0">
+    <>
+      {/* Mobile overlay */}
+      {isSidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 md:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
       
+      <aside className={`w-64 border-r border-white/10 bg-black/80 md:bg-black/40 backdrop-blur-xl h-full flex flex-col pt-6 z-50 fixed md:relative shrink-0 transition-transform duration-300 shadow-2xl md:shadow-none ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+        
+        {/* Mobile close button */}
+        <div className="flex justify-end px-4 md:hidden mb-2">
+          <button 
+            onClick={() => setIsSidebarOpen(false)}
+            className="p-1.5 text-gray-400 hover:text-white bg-white/5 rounded-lg border border-white/10"
+          >
+            <FiX size={20} />
+          </button>
+        </div>
+        
       {/* Main Navigation */}
       <nav className="flex-1 px-4 space-y-1 overflow-y-auto custom-scrollbar">
         <button 
@@ -181,5 +202,6 @@ export default function Sidebar({
       )}
 
     </aside>
+    </>
   );
 }
